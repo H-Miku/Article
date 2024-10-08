@@ -1,0 +1,290 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #ffffff; /* Light background */
+    color: #333; /* Dark text for contrast */
+    padding: 0 20px;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: #ffffff; /* Header background set to white */
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3498db; /* Highlight color for brand */
+}
+
+/* Navbar Styling */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative; /* Required for after pseudo-element hover effect */
+    transition: color 0.3s ease-in-out;
+}
+
+/* COOL NAVBAR HOVER EFFECT */
+nav ul li a:hover {
+    color: #3498db; /* Text color changes */
+}
+
+/* Add a cool underline hover effect using ::after */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #3498db;
+    bottom: -3px; /* Position the line just below the text */
+    left: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Full underline width on hover */
+}
+
+/* Modal-specific styles */
+.modal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Width of modal */
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 1000; /* Ensure modal is above other content */
+}
+
+.modal ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Modal-specific nav ul*/
+.modal ul li {
+    display: block; /* Make the list items stack vertically */
+    margin-bottom: 20px; /* Add some space between menu items */
+}
+
+.modal ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative; /* Required for hover effect */
+    transition: color 0.3s ease-in-out;
+}
+
+/* COOL MODAL NAVBAR HOVER EFFECT */
+.modal ul li a:hover {
+    color: #3498db; /* Text color change on hover */
+}
+
+/* Add a cool underline hover effect using ::before */
+.modal ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #3498db;
+    bottom: -3px;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.modal ul li a:hover::before {
+    width: 100%; /* Full underline on hover */
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: left;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem; /* Increased size */
+    margin: 0;
+}
+
+/* Featured Article Section */
+.featured-article {
+    display: flex;
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}
+
+.featured-content {
+    max-width: 500px;
+    padding-left: 20px;
+}
+
+.featured-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.featured-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* COOL READ MORE BUTTON HOVER EFFECT */
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 2px solid #3498db;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative; /* For ripple effect */
+    overflow: hidden;
+}
+
+/* Ripple effect on hover */
+.read-more::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(52, 152, 219, 0.5);
+    transition: width 0.6s ease, height 0.6s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.read-more:hover::before {
+    width: 200%;
+    height: 200%;
+}
+
+.read-more:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Article Grid */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.article-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* COOL ARTICLE CARD HOVER EFFECT */
+.article-card:hover {
+    transform: translateY(-10px); /* Slight upward lift */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    color: black;
+}
+
+/* Media Queries */
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    nav.modal {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal {
+        width: 70%;
+    }
+
+    .featured-article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .close-btn {
+        text-align: left;
+        font-size: 2rem;
+    }
+}

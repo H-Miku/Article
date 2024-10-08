@@ -1,0 +1,99 @@
+body {
+    background: white; /* Changed background to white */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency for glass effect */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    width: 300px;
+    text-align: center;
+}
+
+.glass-effect h2 {
+    margin-bottom: 20px;
+    color: black; /* Changed to black for visibility */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.05); /* Light background for inputs */
+    color: black; /* Changed text color to black */
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.5); /* Placeholder color */
+}
+
+button {
+    background-color: #2575fc;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+button:hover {
+    background-color: #1d5bbf;
+}
+
+.social-login {
+    margin: 20px 0;
+}
+
+.social-btns {
+    display: flex;
+    justify-content: space-between; /* Align buttons horizontally */
+}
+
+.social-btn {
+    background-color: transparent;
+    border: 2px solid #2575fc; /* Border color matches button */
+    padding: 10px;
+    border-radius: 5px;
+    color: #2575fc; /* Changed to blue color */
+    cursor: pointer;
+    margin: 0; /* Removed margin for proper alignment */
+    flex: 1; /* Make buttons take equal space */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-btn i {
+    margin-right: 5px; /* Spacing for the icon */
+}
+
+.social-btn:hover {
+    background-color: rgba(37, 117, 252, 0.1);
+}
+
+.register-link {
+    color: #2575fc; /* Link color */
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}

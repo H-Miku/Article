@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Layout</title>
+  <link rel="stylesheet" href="art.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>NewsHub</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>What's Happening at CTU DANAO</h2>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+      <div class="featured-image">
+        <img src="/img/tchrsd.jpg" alt="Featured Article">
+      </div>
+      <div class="featured-content">
+        <h3>Teachers' Day Celebration at CTU Danao: Honoring Educators</h3>
+        <p class="short-text">CTU Danao recently celebrated Teachers' Day with a grand event that honored the incredible contributions of educators to the community.</p>
+        <p class="full-text" style="display: none;">Students and faculty came together to express gratitude through performances, speeches, and gifts. This celebration was a reminder of the lasting impact teachers have on shaping young minds and fostering a culture of learning.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </section>
+
+    <!-- Article Grid -->
+    <section class="article-grid">
+      <div class="article-card">
+        <img src="/img/ctudanao.jpg" alt="Article 1">
+        <h4>CTU Danao Acquaintance Party: A Night to Remember</h4>
+        <p class="short-text">The much-anticipated Acquaintance Party at CTU Danao is just around the corner!</p>
+        <p class="full-text" style="display: none;">This event serves as an excellent opportunity for students, especially freshmen, to meet new friends, enjoy great music, and celebrate the beginning of the school year. With fun activities and performances planned, it's set to be a memorable night for everyone!</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+
+      <div class="article-card">
+        <img src="/img/midtermblur.jpg" alt="Article 2">
+        <h4>Midterm Exams Are Approaching: Students Gear Up</h4>
+        <p class="short-text">As the midterm exams draw near at CTU Danao, students are starting to feel the pressure...</p>
+        <p class="full-text" style="display: none;">With assignments piling up and study groups forming, the campus is abuzz with preparations. It's a critical time for students to organize their schedules and focus on revision. From late-night study sessions to last-minute reviews, the midterm hustle is in full swing!</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+
+      <div class="article-card">
+        <img src="/img/intrams.jpg" alt="Article 3">
+        <h4>Get Ready for CTU Danao Intramurals 2024!</h4>
+        <p class="short-text">Excitement is building as CTU Danao prepares for its annual Intramurals.</p>
+        <p class="full-text" style="display: none;">This year’s event promises to be bigger and better, with various sports competitions and activities designed to showcase the talents and skills of the students. From basketball to volleyball, track events to e-sports, the intramurals are an opportunity for everyone to get involved and display their team spirit.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 H-Miku. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Select all "Read More" buttons
+    const readMoreButtons = document.querySelectorAll('.read-more');
+
+    // Loop through all buttons
+    readMoreButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default action (link behavior)
+
+        const fullText = this.previousElementSibling; // Get the full text element
+        const shortText = fullText.previousElementSibling; // Get the short text element
+
+        // Toggle visibility
+        if (fullText.style.display === 'none') {
+          fullText.style.display = 'block'; // Show full text
+          shortText.style.display = 'none'; // Hide short text
+          this.textContent = 'Show Less'; // Change button text to "Show Less"
+        } else {
+          fullText.style.display = 'none'; // Hide full text
+          shortText.style.display = 'block'; // Show short text
+          this.textContent = 'Read More'; // Change button text to "Read More"
+        }
+      });
+    });
+  </script>
+</body>
+</html>

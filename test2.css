@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #ffffff; /* Light background */
+    color: #333; /* Dark text for contrast */
+    padding: 0 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: #ffffff; /* Header background set to white */
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3498db; /* Highlight color for brand */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Same highlight color for hover */
+}
+
+/* Modal-specific styles */
+.modal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Width of modal */
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 1000; /* Ensure modal is above other content */
+}
+
+.modal ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Modal-specific nav ul li styling for mobile */
+.modal ul li {
+    display: block; /* Make the list items stack vertically */
+    margin-bottom: 20px; /* Add some space between menu items */
+}
+
+.modal ul li a {
+    display: block; /* Ensure links take up the full width of their container */
+    padding: 10px 0; /* Add padding for touch-friendly area */
+    text-align: left; /* Align the text to the left */
+    color: #333;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.hero {
+    text-align: left; /* Align text to the left */
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem; /* Increased size for "Our Thoughts" */
+    margin: 0;
+}
+
+.featured-article {
+    display: flex;
+    background-color: #f8f8f8; /* Light background for featured section */
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.featured-image img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Limit maximum width */
+}
+
+.featured-content {
+    max-width: 500px; /* Limit the width of the text area */
+    padding-left: 20px; /* Add padding to move text slightly to the right */
+}
+
+.featured-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.featured-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three articles per row */
+    gap: 30px;
+    margin-bottom: 40px; /* Adds spacing below the article grid */
+}
+
+.article-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.article-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.article-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.short-text,
+.full-text {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    color: black;
+}
+
+/* Read More button */
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    text-decoration: none;
+    color: #333;
+    background: transparent;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #3498db; /* Change background on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Responsive styles */
+@media (min-width: 769px) {
+    /* Hide hamburger and modal on larger screens */
+    .nav-toggle {
+        display: none; /* Hide hamburger on larger screens */
+    }
+
+    nav.modal {
+        display: none; /* Hide modal on larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hide desktop nav and show hamburger icon */
+    .desktop-nav {
+        display: none; /* Hide on mobile */
+    }
+
+    /* Make modal navigation vertical and full height */
+    .nav-toggle {
+        display: block; /* Show hamburger on mobile */
+        cursor: pointer;
+    }
+
+    /* Grid becomes one column on mobile */
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjust hero section */
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Adjust modal styles for mobile */
+    .modal {
+        width: 70%; /* Modal takes up 70% of the screen width on mobile */
+    }
+
+    /* Featured article becomes stacked */
+    .featured-article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust close button */
+    .close-btn {
+        text-align: left;
+        font-size: 2rem;
+    }
+}

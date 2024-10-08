@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white; /* White background for clarity */
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white for the overlay */
+}
+
+.login-popup {
+    position: relative;
+    width: 320px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background for glass effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Blurring background behind the popup */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border for contrast */
+    text-align: center;
+    color: black; /* Changed text color to black */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: black; /* Changed to black for visibility */
+}
+
+.input-container {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px;
+    padding-left: 35px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.3); /* Light input background */
+    color: black; /* Changed input text color to black */
+    font-size: 16px;
+    outline: none;
+    text-align: left;
+}
+
+.icon {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: blue; /* Change icon color to blue */
+}
+
+.toggle-password {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
+    color: blue; /* Change toggle password icon color to blue */
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.remember-forgot label {
+    cursor: pointer;
+}
+
+.remember-forgot a {
+    color: #bdbdbd;
+    text-decoration: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: blue; /* Change button background color to blue */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s; /* Transition for hover effect */
+}
+
+.login-btn:hover {
+    background: darkblue; /* Darker blue on hover */
+}
+
+.social-login {
+    margin-top: 15px;
+}
+
+.social-btn-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center align the buttons */
+    margin-top: 10px; /* Space above the social buttons */
+}
+
+.social-btn {
+    width: 48px; /* Set width for buttons */
+    height: 48px; /* Set height for buttons */
+    background-color: transparent ;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s; /* Transition for hover effect */
+    margin: 0 5px; /* Space between buttons */
+}
+
+.social-btn.google {
+  /*  background: rgba(255, 0, 0, 0.2); /* Google button color */
+}
+
+.social-btn.facebook {
+   /* background: rgba(59, 89, 152, 0.2); /* Facebook button color */
+}
+
+.social-btn.yahoo {
+   /* background: rgba(255, 255, 0, 0.2); /* Yahoo button color */
+}
+
+.social-btn.apple {
+    /*background: rgba(0, 0, 0, 0.2); /* Apple button color */
+}
+
+.social-btn:hover {
+    background: rgba(0, 0, 0, 0.2); /* Darker on hover */
+}
+
+.social-btn i {
+    color: blue; /* Change social button icons to blue */
+}
+
+.login-popup p {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.login-popup p a {
+    color: #bdbdbd;
+    text-decoration: none;
+}
+
+/* Separator styling */
+.separator {
+    margin: 15px 0;
+    font-size: 14px;
+    color: black; /* Change the color of the separator text */
+}
