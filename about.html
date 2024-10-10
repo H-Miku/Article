@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NewsHub</title>
+    <link rel="stylesheet" href="about.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>NewsHub</h1>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <!--<li><a href="blog.html">Blog</a></li>-->
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <nav class="modal" id="modalNav">
+            <div class="close-btn" id="closeBtn">&times;</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-us">
+            <h2>About Us</h2>
+            <p>Welcome to NewsHub, your go-to source for the latest news and updates from around the globe. Our mission is to deliver accurate and timely information to our readers, helping them stay informed about important events and trends.</p>
+            
+            <h3>Our Vision</h3>
+            <p>At NewsHub, we believe in the power of information. Our vision is to become the leading news platform that inspires and engages our audience through quality journalism.</p>
+
+            <h3>Our Team</h3>
+            <p>Our dedicated team of journalists, writers, and editors work tirelessly to bring you the most relevant news. With diverse backgrounds and expertise, we strive to provide a balanced perspective on the stories that matter.</p>
+
+            <h3>Join Us</h3>
+            <p>If you’re passionate about news and want to be part of our growing community, follow us on social media and subscribe to our newsletter for the latest updates.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 H-Miku. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Modal navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const modalNav = document.getElementById('modalNav');
+        const closeBtn = document.getElementById('closeBtn');
+
+        navToggle.addEventListener('click', function() {
+            modalNav.style.display = 'block'; // Show modal
+        });
+
+        closeBtn.addEventListener('click', function() {
+            modalNav.style.display = 'none'; // Hide modal
+        });
+    </script>
+    <script>
+    // Get the current page URL
+    const currentUrl = window.location.pathname.split('/').pop();
+
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('.desktop-nav ul li a');
+
+    // Loop through the links and add 'active' class to the current page link
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentUrl) {
+            link.classList.add('active');
+        }
+    });
+</script>
+</body>
+</html>

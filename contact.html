@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>NewsHub</h1>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <nav class="modal" id="modalNav">
+            <div class="close-btn" id="closeBtn">&times;</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-us">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 H-Miku. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Modal navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const modalNav = document.getElementById('modalNav');
+        const closeBtn = document.getElementById('closeBtn');
+
+        navToggle.addEventListener('click', function() {
+            modalNav.style.display = 'block'; // Show modal
+        });
+
+        closeBtn.addEventListener('click', function() {
+            modalNav.style.display = 'none'; // Hide modal
+        });
+    </script>
+    <script>
+    // Get the current page URL
+    const currentUrl = window.location.pathname.split('/').pop();
+
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('.desktop-nav ul li a');
+
+    // Loop through the links and add 'active' class to the current page link
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentUrl) {
+            link.classList.add('active');
+        }
+    });
+</script>
+</body>
+</html>

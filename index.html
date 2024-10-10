@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>NewsHub</h1>
+    </div>
+    <div class="nav-toggle" id="navToggle">
+      &#9776; <!-- Hamburger icon -->
+    </div>
+    <nav class="desktop-nav">
+      <ul>
+         <li><a href="/index.html">Home</a></li>
+         <li><a href="/about.html">About</a></li>
+         <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/login/login.html">Login</a></li>
+      </ul>
+    </nav>
+    <nav class="modal" id="modalNav">
+      <div class="close-btn" id="closeBtn">&times;</div>
+      <ul>
+        
+         <li><a href="/index.html">Home</a></li>
+         <li><a href="/about.html">About</a></li>
+         <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/login/login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+<!-- Search Bar Below the Header -->
+<div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search...">
+    <button type="button" id="search-button">Search</button>
+</div>
+
+  <main>
+    <section class="hero">
+      <h2>What's Happening at CTU DANAO</h2>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+      <div class="featured-image">
+        <img src="/img/tchrsd.jpg" alt="Featured Article">
+      </div>
+      <div class="featured-content">
+        <h3>Teachers' Day Celebration at CTU Danao: Honoring Educators</h3>
+        <p class="short-text">CTU Danao recently celebrated Teachers' Day with a grand event that honored the incredible contributions of educators to the community.</p>
+        <p class="full-text" style="display: none;">Students and faculty came together to express gratitude through performances, speeches, and gifts. This celebration was a reminder of the lasting impact teachers have on shaping young minds and fostering a culture of learning.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </section>
+
+    <!-- Article Grid -->
+    <section class="article-grid">
+      <div class="article-card">
+        <img src="/img/ctudanao.jpg" alt="Article 1">
+        <h4>CTU Danao Acquaintance Party: A Night to Remember</h4>
+        <p class="short-text">The much-anticipated Acquaintance Party at CTU Danao is just around the corner!</p>
+        <p class="full-text" style="display: none;">This event serves as an excellent opportunity for students, especially freshmen, to meet new friends, enjoy great music, and celebrate the beginning of the school year. With fun activities and performances planned, it's set to be a memorable night for everyone!</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+
+      <div class="article-card">
+        <img src="/img/1728431804635.jpg" alt="Article 2">
+        <h4>Midterm Exams Are Approaching: Students Gear Up</h4>
+        <p class="short-text">As the midterm exams draw near at CTU Danao, students are starting to feel the pressure...</p>
+        <p class="full-text" style="display: none;">With assignments piling up and study groups forming, the campus is abuzz with preparations. It's a critical time for students to organize their schedules and focus on revision. From late-night study sessions to last-minute reviews, the midterm hustle is in full swing!</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+
+      <div class="article-card">
+        <img src="/img/intrams.jpg" alt="Article 3">
+        <h4>Get Ready for CTU Danao Intramurals 2024!</h4>
+        <p class="short-text">Excitement is building as CTU Danao prepares for its annual Intramurals.</p>
+        <p class="full-text" style="display: none;">This year’s event promises to be bigger and better, with various sports competitions and activities designed to showcase the talents and skills of the students. From basketball to volleyball, track events to e-sports, the intramurals are an opportunity for everyone to get involved and display their team spirit.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </section>
+    
+    <!-- More Like This Section -->
+<section class="more-like-this-section">
+  <h2>Trendin Now</h2> <!-- Moved h2 outside article-card for clarity -->
+  <section class="article-grid">
+    <div class="article-card">
+      <img src="/img/IMG_20241008_092813.jpg" alt="Article 1">
+<h4>CTU Danao: A Campus of Beauty and Tranquility</h4>
+<p class="short-text">CTU Danao is known for its scenic landscapes and peaceful learning environment...</p>
+<p class="full-text" style="display: none;">The campus is adorned with lush greenery, modern infrastructure, and serene outdoor spaces that make it an ideal place for students to focus on their studies. The combination of nature and cutting-edge facilities provides a harmonious atmosphere, while the eco-friendly initiatives ensure that the campus remains clean and sustainable. Whether you're walking through tree-lined pathways or relaxing in the gardens, CTU Danao offers a beautiful and inspiring setting for learning.</p>
+<a href="#" class="read-more">Read More</a>
+    </div>
+
+    <div class="article-card">
+      <img src="/img/IMG_20241008_092507.jpg" alt="Article 2">
+      <h4>CTU Danao: A Hub of Productivity and Innovation</h4>
+<p class="short-text">At CTU Danao, productivity thrives as students and faculty work together to achieve excellence...</p>
+<p class="full-text" style="display: none;">With a strong focus on academic success and hands-on learning, CTU Danao has become a center for innovation and progress. The university offers modern facilities, dedicated teachers, and an array of resources that enable students to reach their full potential. Collaborative projects, research opportunities, and community engagement are just a few ways in which the campus nurtures a productive learning environment, ensuring that students are well-prepared for the challenges of the future.</p>
+<a href="#" class="read-more">Read More</a>
+    </div>
+
+    <div class="article-card">
+      <img src="/img/intrams.jpg" alt="Article 3">
+      <h4>Get Ready for CTU Danao Intramurals 2024!</h4>
+      <p class="short-text">Excitement is building as CTU Danao prepares for its annual Intramurals.</p>
+      <p class="full-text" style="display: none;">This year’s event promises to be bigger and better, with various sports competitions and activities designed to showcase the talents and skills of the students. From basketball to volleyball, track events to e-sports, the intramurals are an opportunity for everyone to get involved and display their team spirit.</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  </section>
+</section>
+
+
+<section class="trending-articles">
+    <h2>More Like This</h2>
+    <div class="trending-grid">
+        <div class="trending-article">
+            <h3>How to Optimize Your Website for SEO in 2024</h3>
+            <p>SEO is evolving rapidly. Learn the top strategies to stay ahead...</p>
+        </div>
+        <div class="trending-article">
+            <h3>The Rise of AI in Web Development</h3>
+            <p>Artificial Intelligence is shaping the future of web development...</p>
+        </div>
+        <div class="trending-article">
+            <h3>Best Practices for Mobile-First Design</h3>
+            <p>Mobile-first design is crucial for improving user experience...</p>
+        </div>
+    </div>
+</section>
+    
+
+    
+    
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2024 H-Miku. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Select all "Read More" buttons
+    const readMoreButtons = document.querySelectorAll('.read-more');
+
+    // Loop through all buttons
+    readMoreButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default action (link behavior)
+
+        const fullText = this.previousElementSibling; // Get the full text element
+        const shortText = fullText.previousElementSibling; // Get the short text element
+
+        // Toggle visibility
+        if (fullText.style.display === 'none') {
+          fullText.style.display = 'block'; // Show full text
+          shortText.style.display = 'none'; // Hide short text
+          this.textContent = 'Show Less'; // Change button text to "Show Less"
+        } else {
+          fullText.style.display = 'none'; // Hide full text
+          shortText.style.display = 'block'; // Show short text
+          this.textContent = 'Read More'; // Change button text to "Read More"
+        }
+      });
+    });
+
+    // Modal navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const modalNav = document.getElementById('modalNav');
+    const closeBtn = document.getElementById('closeBtn');
+
+    navToggle.addEventListener('click', function() {
+      modalNav.style.display = 'block'; // Show modal
+    });
+
+    closeBtn.addEventListener('click', function() {
+      modalNav.style.display = 'none'; // Hide modal
+    });
+  </script>
+  <script>
+    // Get the current page URL
+    const currentUrl = window.location.pathname.split('/').pop();
+
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('.desktop-nav ul li a');
+
+    // Loop through the links and add 'active' class to the current page link
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentUrl) {
+            link.classList.add('active');
+        }
+    });
+</script>
+</body>
+</html>
