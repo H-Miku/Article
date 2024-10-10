@@ -1,1 +1,1 @@
-<a href="https://rawcdn.githack.com/H-Miku/Article/58207a800e599b725c668679b7dc897760483620/test.html">testo</a>
+<a href="https://rawcdn.githack.com/H-Miku/Article/457fd6a65b80efe609a9a411707f4033f9c2d152/index.html">testo</a>
