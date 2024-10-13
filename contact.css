@@ -15,17 +15,19 @@ body {
 
 /* Header Styles */
 header {
-    background-color: white; /* Black header */
-    color: black;
-    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: relative;
+    padding: 15px 20px ;
+  
+    background-color: white;
+    
 }
 
+
 .logo h1 {
-    font-size: 24px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3498db;
 }
 
 .nav-toggle {
@@ -50,28 +52,54 @@ header {
 
 /* Modal Navigation Styles */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 250px;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
     z-index: 1000;
 }
 
-.modal ul {
-    list-style: none;
-    padding: 20px;
-}
-
 .modal ul li {
-    margin: 15px 0;
+    display: block;
+    margin-bottom: 20px;
 }
 
 .modal ul li a {
-    color: #fff;
     text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.modal ul li a:hover {
+    color: #3498db;
+}
+
+.modal ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #3498db;
+    bottom: -3px;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.modal ul li a:hover::before {
+    width: 100%;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 /* Contact Us Section */
@@ -135,14 +163,33 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .desktop-nav {
-        display: none; /* Hide desktop nav on mobile */
+        display: none;
     }
 
     .nav-toggle {
-        display: block; /* Show hamburger icon on mobile */
+        display: block;
+        cursor: pointer;
     }
 
-    .modal ul {
-        text-align: center; /* Center the modal links */
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal {
+        width: 70%;
+    }
+
+    .featured-article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .close-btn {
+        text-align: left;
+        font-size: 2rem;
     }
 }
