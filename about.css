@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    padding:0;
 }
 
 /* Header Styles */
@@ -19,7 +20,7 @@ header {
     justify-content: space-between;
     padding: 15px 20px ;
   
-    background-color: white;
+    background-color: #313131;
     
 }
 
@@ -27,7 +28,7 @@ header {
 .logo h1 {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #3498db;
+    color: white;
 }
 
 .nav-toggle {
@@ -45,7 +46,7 @@ header {
 }
 
 .desktop-nav ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
@@ -58,7 +59,7 @@ header {
     left: 0;
     width: 250px;
     height: 100%;
-    background: #fff;
+    background: rgba(0,0,0,0.8);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     padding: 20px;
     z-index: 1000;
@@ -71,7 +72,7 @@ header {
 
 .modal ul li a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: bold;
     position: relative;
     transition: color 0.3s ease-in-out;
@@ -100,6 +101,7 @@ header {
     font-size: 1.5rem;
     cursor: pointer;
     margin-bottom: 20px;
+    color:white;
 }
 
 
@@ -145,6 +147,7 @@ footer {
     .nav-toggle {
         display: block;
         cursor: pointer;
+        color:white;
     }
 
     .article-grid {
@@ -168,5 +171,4 @@ footer {
         text-align: left;
         font-size: 2rem;
     }
-}
 }

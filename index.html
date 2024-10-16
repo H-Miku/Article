@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Article Layout</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="test2.css">
 </head>
 <body>
   <header>
     <div class="logo">
-      <h1>NewsHub</h1>
+      <h1>NooZ</h1>
     </div>
     <div class="nav-toggle" id="navToggle">
       &#9776; <!-- Hamburger icon -->
@@ -115,6 +115,7 @@
   </section>
 </section>
 
+<!--
 
 <section class="trending-articles">
     <h2>More Like This</h2>
@@ -135,7 +136,27 @@
 </section>
     
 
-    
+   -->
+<section class="trending-articles">
+    <h2>More Like This</h2>
+    <div class="trending-grid">
+        <div class="trending-article">
+            <img src="img/dono.jpg" alt="CTU Mobile Blood Donation Drive">
+            <!--<h3>CTU Mobile Blood Donation Drive</h3>-->
+            <p>Join the CTU community in saving lives through mobile blood donation...</p>
+        </div>
+        <div class="trending-article">
+            <img src="img/lowres.jpg" alt="ID Spotted in School Grounds">
+           <!-- <h3>ID Spotted in School Grounds</h3> -->
+            <p>An ID has been found in the school grounds. Contact the guard house for details...</p>
+        </div>
+        <div class="trending-article">
+            <img src="img/bpi.jpg" alt="BPI Financial Literacy Seminar">
+           <!-- <h3>BPI Financial Literacy Seminar</h3> -->
+            <p>Empower yourself with financial knowledge at the BPI Financial Literacy Seminar...</p>
+        </div>
+    </div>
+</section>
     
     
   </main>
@@ -182,19 +203,38 @@
       modalNav.style.display = 'none'; // Hide modal
     });
   </script>
+ 
+ 
+ 
+  
   <script>
-    // Get the current page URL
-    const currentUrl = window.location.pathname.split('/').pop();
+const zoomedImage = document.createElement('div');
+zoomedImage.classList.add('zoomed-image');
+document.body.appendChild(zoomedImage);
 
-    // Select all navigation links
-    const navLinks = document.querySelectorAll('.desktop-nav ul li a');
+// Select all images, including the featured article image
+const images = document.querySelectorAll('.article-card img, .trending-article img, .featured-article img');
 
-    // Loop through the links and add 'active' class to the current page link
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentUrl) {
-            link.classList.add('active');
-        }
-    });
-</script>
+images.forEach(image => {
+  image.addEventListener('click', function() {
+    zoomedImage.innerHTML = `<img src="${this.src}" alt="Zoomed Image">`;
+    zoomedImage.style.display = 'block'; // Show the zoomed image
+  });
+});
+
+// Close the zoomed image when clicking on the image or outside of it
+zoomedImage.addEventListener('click', function(e) {
+  zoomedImage.style.display = 'none'; // Hide the zoomed image
+});
+
+// Close the zoomed image when clicking outside the image (on the background)
+document.body.addEventListener('click', function(e) {
+  if (e.target === zoomedImage || e.target.tagName === 'IMG') {
+    return; // Prevent hiding when clicking on the image itself
+  }
+  zoomedImage.style.display = 'none'; // Hide the zoomed image if clicked outside
+});
+</script> 
+
 </body>
 </html>

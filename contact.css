@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    padding:0;
 }
 
 /* Header Styles */
@@ -18,8 +19,11 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 15px 20px ;
-  
-    background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Only bottom shadow */
+
+
+
+    background-color: #313131;
     
 }
 
@@ -27,28 +31,54 @@ header {
 .logo h1 {
     font-size: 1.8rem;
     font-weight: bold;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.top-links a {
+    color: #fff;
+    margin-left: 15px;
+}
+
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+
+nav ul li a:hover {
     color: #3498db;
 }
 
-.nav-toggle {
-    font-size: 24px;
-    display: none; /* Hidden by default, visible on mobile */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #3498db;
+    bottom: -3px;
+    left: 0;
+    transition: all 0.4s ease-in-out;
 }
 
-.desktop-nav ul {
-    list-style: none;
-    display: flex;
+nav ul li a:hover::after {
+    width: 100%;
 }
 
-.desktop-nav ul li {
-    margin: 0 15px;
-}
 
-.desktop-nav ul li a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
 
 /* Modal Navigation Styles */
 .modal {
@@ -58,7 +88,7 @@ header {
     left: 0;
     width: 250px;
     height: 100%;
-    background: #fff;
+    background: rgba(0,0,0,0.8);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     padding: 20px;
     z-index: 1000;
@@ -71,7 +101,7 @@ header {
 
 .modal ul li a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: bold;
     position: relative;
     transition: color 0.3s ease-in-out;
@@ -100,6 +130,7 @@ header {
     font-size: 1.5rem;
     cursor: pointer;
     margin-bottom: 20px;
+    color: white;
 }
 
 /* Contact Us Section */
@@ -169,6 +200,7 @@ footer {
     .nav-toggle {
         display: block;
         cursor: pointer;
+       color:white ;
     }
 
     .article-grid {
