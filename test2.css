@@ -47,7 +47,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-left: 20px;
+    margin-left: 45px;
 }
 
 nav ul li a {
@@ -335,17 +335,17 @@ footer {
     margin-bottom: 80px;
     width: 250px; /* Initial width */
     transition: width 0.4s ease, box-shadow 0.3s ease; /* Smooth transition for width and shadow */
-    overflow: hidden; /* Prevent overflow */
+    /* Prevent overflow */
 }
 
 .search-bar:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
 
-.search-bar:focus-within {
-    width: 350px; /* Expanded width on focus */
+/*.search-bar:focus-within {
+    width: 350px; 
 }
-
+*/
 .search-bar input {
     border: none; /* No border */
     background: none; /* Transparent background */
